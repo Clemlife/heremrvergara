@@ -15,7 +15,7 @@ def rev_string(string):
     :return string in reverse order without non-alpha characters:
     """
     for i in string:
-        if i not in "abcdefghijklmnopqrstuvwxyz":
+        if not i.isalpha():
             string = string.replace(i, '')
     if len(string) <= 1:
         return string
@@ -27,7 +27,7 @@ def palindrome_checker(string):
     :return True if string is palindrome, False otherwise--ignores non alpha characters:
     """
     for i in string:
-        if i not in "abcdefghijklmnopqrstuvwxyz":
+        if not i.isalpha():
             string = string.replace(i, '')
     rev = rev_string(string)
     if len(string) <= 1:
